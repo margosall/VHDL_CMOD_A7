@@ -34,40 +34,21 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity uint16_seg_coder is
-    Port ( intIn : in STD_LOGIC_VECTOR (15 downto 0);
-           muxOut : out STD_LOGIC_VECTOR (1 downto 0);
-           nibbleOut : out STD_LOGIC_VECTOR (3 downto 0);
+    Port ( muxOut : out STD_LOGIC_VECTOR (1 downto 0);
            clk : in STD_LOGIC);
 end uint16_seg_coder;
 
 architecture Behavioral of uint16_seg_coder is
 begin
-process(intIn,clk)
-    variable valueDigiti : std_logic_vector(3 downto 0);
-    variable counteri : std_logic_vector(2 downto 0); 
-    variable counterOut : std_logic_vector(1 downto 0); 
-    variable counterDown : std_logic_vector(10 downto 0);
+process(clk)
+    variable counteri : std_logic_vector(1 downto 0); 
+    variable counterDowni : std_logic_vector(10 downto 0);
 
 begin
     if(rising_edge(clk)) then
-        counterDown := counterDown + 1;
-        if(counterDown = "1111111111") then
-            case counteri is
-                when "000" => null;
-                when "001" => null;
-                when "010" => null;
-                when "011" => null;
-                when others => counteri := "000";
-            end case;
-
-            case counteri is
-                when "000" => nibbleOut <= std_logic_vector(to_unsigned(to_integer(unsigned(intIn)) MOD 10,4));
-                when "001" => nibbleOut <= std_logic_vector(to_unsigned((to_integer(unsigned(intIn)) / 10) MOD 10,4));
-                when "010" => nibbleOut <= std_logic_vector(to_unsigned((to_integer(unsigned(intIn)) / 100) MOD 10,4));
-                when "011" => nibbleOut <= std_logic_vector(to_unsigned((to_integer(unsigned(intIn)) / 1000) MOD 10,4));
-                when others => null;
-            end case;
-            muxOut <= counteri(1 downto 0);
+        counterDowni := counterDowni + 1;
+        if(counterDowni = "1111111111") then
+            muxOut <= counteri;
             counteri := counteri + 1;
         end if;
     end if;

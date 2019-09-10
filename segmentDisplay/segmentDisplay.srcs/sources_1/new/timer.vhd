@@ -48,7 +48,7 @@ begin
         cycle_counter <= cycle_counter + 1;
             outi := cycle_counter(37 downto 22);
             case outi is
-                when std_logic_vector(to_unsigned(10000,16)) => outi := std_logic_vector(to_unsigned(0,16));
+                when "0010011100010000" => outi := "0000000000000000";
                 when others => null;
             end case;
         intOut <= outi;

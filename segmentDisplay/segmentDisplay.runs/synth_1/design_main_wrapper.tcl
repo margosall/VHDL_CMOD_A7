@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 1
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -35,9 +34,11 @@ set_property ip_output_repo /home/margo/Documents/Programming/VHDL/segmentDispla
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/timer.vhd
-  /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd
   /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/segmentDisplay.vhd
   /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/mux.vhd
+  /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/binary_bcd.vhd
+  /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/mux4_1.vhd
+  /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd
   /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/hdl/design_main_wrapper.vhd
 }
 add_files /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/design_main.bd

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# mux, segmentDisplay, timer, uint16_seg_coder
+# binary_bcd, mux4_1, mux, segmentDisplay, timer, uint16_seg_coder
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -172,6 +172,28 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {12000000} \
  ] $sysclk
 
+  # Create instance: binary_bcd_0, and set properties
+  set block_name binary_bcd
+  set block_cell_name binary_bcd_0
+  if { [catch {set binary_bcd_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $binary_bcd_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: mux4_1_0, and set properties
+  set block_name mux4_1
+  set block_cell_name mux4_1_0
+  if { [catch {set mux4_1_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $mux4_1_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: mux_0, and set properties
   set block_name mux
   set block_cell_name mux_0
@@ -217,12 +239,16 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
+  connect_bd_net -net binary_bcd_0_bcd0 [get_bd_pins binary_bcd_0/bcd0] [get_bd_pins mux4_1_0/in0]
+  connect_bd_net -net binary_bcd_0_bcd1 [get_bd_pins binary_bcd_0/bcd1] [get_bd_pins mux4_1_0/in1]
+  connect_bd_net -net binary_bcd_0_bcd2 [get_bd_pins binary_bcd_0/bcd2] [get_bd_pins mux4_1_0/in2]
+  connect_bd_net -net binary_bcd_0_bcd3 [get_bd_pins binary_bcd_0/bcd3] [get_bd_pins mux4_1_0/in3]
+  connect_bd_net -net mux4_1_0_y [get_bd_pins mux4_1_0/y] [get_bd_pins segmentDisplay_0/nrValue]
   connect_bd_net -net mux_0_digitSelect [get_bd_ports digitSelect] [get_bd_pins mux_0/digitSelect]
   connect_bd_net -net segmentDisplay_0_seg7 [get_bd_ports segmentPins] [get_bd_pins segmentDisplay_0/seg7]
-  connect_bd_net -net sysclk_1 [get_bd_ports sysclk] [get_bd_pins timer_0/clk] [get_bd_pins uint16_seg_coder_0/clk]
-  connect_bd_net -net timer_0_intOut [get_bd_pins timer_0/intOut] [get_bd_pins uint16_seg_coder_0/intIn]
-  connect_bd_net -net uint16_seg_coder_0_muxOut [get_bd_pins mux_0/mux2] [get_bd_pins uint16_seg_coder_0/muxOut]
-  connect_bd_net -net uint16_seg_coder_0_nibbleOut [get_bd_pins segmentDisplay_0/nrValue] [get_bd_pins uint16_seg_coder_0/nibbleOut]
+  connect_bd_net -net sysclk_1 [get_bd_ports sysclk] [get_bd_pins binary_bcd_0/clk] [get_bd_pins timer_0/clk] [get_bd_pins uint16_seg_coder_0/clk]
+  connect_bd_net -net timer_0_intOut [get_bd_pins binary_bcd_0/binary_in] [get_bd_pins timer_0/intOut]
+  connect_bd_net -net uint16_seg_coder_0_muxOut [get_bd_pins mux4_1_0/s] [get_bd_pins mux_0/mux2] [get_bd_pins uint16_seg_coder_0/muxOut]
 
   # Create address segments
 

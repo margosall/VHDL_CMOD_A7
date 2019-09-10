@@ -9,13 +9,19 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main || 
 # IP: bd/design_main/ip/design_main_timer_0_0/design_main_timer_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_timer_0_0 || ORIG_REF_NAME==design_main_timer_0_0} -quiet] -quiet
 
-# IP: bd/design_main/ip/design_main_uint16_seg_coder_0_0/design_main_uint16_seg_coder_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_uint16_seg_coder_0_0 || ORIG_REF_NAME==design_main_uint16_seg_coder_0_0} -quiet] -quiet
-
 # IP: bd/design_main/ip/design_main_segmentDisplay_0_0/design_main_segmentDisplay_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_segmentDisplay_0_0 || ORIG_REF_NAME==design_main_segmentDisplay_0_0} -quiet] -quiet
 
 # IP: bd/design_main/ip/design_main_mux_0_0/design_main_mux_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_mux_0_0 || ORIG_REF_NAME==design_main_mux_0_0} -quiet] -quiet
+
+# IP: bd/design_main/ip/design_main_binary_bcd_0_0/design_main_binary_bcd_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_binary_bcd_0_0 || ORIG_REF_NAME==design_main_binary_bcd_0_0} -quiet] -quiet
+
+# IP: bd/design_main/ip/design_main_mux4_1_0_0/design_main_mux4_1_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_mux4_1_0_0 || ORIG_REF_NAME==design_main_mux4_1_0_0} -quiet] -quiet
+
+# IP: bd/design_main/ip/design_main_uint16_seg_coder_0_1/design_main_uint16_seg_coder_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_main_uint16_seg_coder_0_1 || ORIG_REF_NAME==design_main_uint16_seg_coder_0_1} -quiet] -quiet
 
 # XDC: bd/design_main/design_main_ooc.xdc

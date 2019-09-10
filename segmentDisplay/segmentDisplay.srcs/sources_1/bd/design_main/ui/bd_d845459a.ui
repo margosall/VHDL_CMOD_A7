@@ -2,21 +2,27 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port sysclk -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
-preplace portBus digitSelect -pg 1 -lvl 4 -x 830 -y 70 -defaultsOSRD
-preplace portBus segmentPins -pg 1 -lvl 4 -x 830 -y 170 -defaultsOSRD
-preplace inst timer_0 -pg 1 -lvl 1 -x 130 -y 70 -defaultsOSRD
-preplace inst uint16_seg_coder_0 -pg 1 -lvl 2 -x 390 -y 80 -defaultsOSRD
-preplace inst segmentDisplay_0 -pg 1 -lvl 3 -x 670 -y 170 -defaultsOSRD
-preplace inst mux_0 -pg 1 -lvl 3 -x 670 -y 70 -defaultsOSRD
-preplace netloc timer_0_intOut 1 1 1 N 70
-preplace netloc uint16_seg_coder_0_nibbleOut 1 2 1 530 90n
-preplace netloc uint16_seg_coder_0_muxOut 1 2 1 N 70
-preplace netloc sysclk_1 1 0 2 20 130 240
-preplace netloc mux_0_digitSelect 1 3 1 N 70
-preplace netloc segmentDisplay_0_seg7 1 3 1 N 170
-levelinfo -pg 1 0 130 390 670 830
-pagesize -pg 1 -db -bbox -sgen -100 -170 1010 230
+preplace port sysclk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace portBus digitSelect -pg 1 -lvl 5 -x 1050 -y 60 -defaultsOSRD
+preplace portBus segmentPins -pg 1 -lvl 5 -x 1050 -y 200 -defaultsOSRD
+preplace inst segmentDisplay_0 -pg 1 -lvl 4 -x 890 -y 200 -defaultsOSRD
+preplace inst mux_0 -pg 1 -lvl 4 -x 890 -y 60 -defaultsOSRD
+preplace inst mux4_1_0 -pg 1 -lvl 3 -x 630 -y 200 -defaultsOSRD
+preplace inst uint16_seg_coder_0 -pg 1 -lvl 2 -x 380 -y 60 -defaultsOSRD
+preplace inst timer_0 -pg 1 -lvl 1 -x 130 -y 200 -defaultsOSRD
+preplace inst binary_bcd_0 -pg 1 -lvl 2 -x 380 -y 190 -defaultsOSRD
+preplace netloc mux_0_digitSelect 1 4 1 NJ 60
+preplace netloc segmentDisplay_0_seg7 1 4 1 NJ 200
+preplace netloc timer_0_intOut 1 1 1 NJ 200
+preplace netloc binary_bcd_0_bcd0 1 2 1 N 160
+preplace netloc binary_bcd_0_bcd1 1 2 1 N 180
+preplace netloc binary_bcd_0_bcd2 1 2 1 N 200
+preplace netloc binary_bcd_0_bcd3 1 2 1 N 220
+preplace netloc uint16_seg_coder_0_muxOut 1 2 2 520 60 NJ
+preplace netloc sysclk_1 1 0 2 20 60 240
+preplace netloc mux4_1_0_y 1 3 1 N 200
+levelinfo -pg 1 0 130 380 630 890 1050
+pagesize -pg 1 -db -bbox -sgen -100 0 1230 300
 "
 }
 {

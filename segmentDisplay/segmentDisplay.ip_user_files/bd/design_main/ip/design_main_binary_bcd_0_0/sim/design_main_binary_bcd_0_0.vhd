@@ -46,51 +46,57 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:uint16_seg_coder:1.0
+-- IP VLNV: xilinx.com:module_ref:binary_bcd:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY design_main_uint16_seg_coder_0_0 IS
+ENTITY design_main_binary_bcd_0_0 IS
   PORT (
-    intIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    muxOut : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-    nibbleOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    clk : IN STD_LOGIC
+    clk : IN STD_LOGIC;
+    binary_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    bcd0 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    bcd1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    bcd2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    bcd3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
-END design_main_uint16_seg_coder_0_0;
+END design_main_binary_bcd_0_0;
 
-ARCHITECTURE design_main_uint16_seg_coder_0_0_arch OF design_main_uint16_seg_coder_0_0 IS
+ARCHITECTURE design_main_binary_bcd_0_0_arch OF design_main_binary_bcd_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_main_uint16_seg_coder_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT uint16_seg_coder IS
-    PORT (
-      intIn : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      muxOut : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-      nibbleOut : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      clk : IN STD_LOGIC
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_main_binary_bcd_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT binary_bcd IS
+    GENERIC (
+      N : INTEGER
     );
-  END COMPONENT uint16_seg_coder;
-  ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_main_uint16_seg_coder_0_0_arch: ARCHITECTURE IS "uint16_seg_coder,Vivado 2019.1.2";
-  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
-  ATTRIBUTE CHECK_LICENSE_TYPE OF design_main_uint16_seg_coder_0_0_arch : ARCHITECTURE IS "design_main_uint16_seg_coder_0_0,uint16_seg_coder,{}";
-  ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_main_uint16_seg_coder_0_0_arch: ARCHITECTURE IS "design_main_uint16_seg_coder_0_0,uint16_seg_coder,{x_ipProduct=Vivado 2019.1.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=uint16_seg_coder,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL}";
+    PORT (
+      clk : IN STD_LOGIC;
+      binary_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      bcd0 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      bcd1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      bcd2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      bcd3 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    );
+  END COMPONENT binary_bcd;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
-  ATTRIBUTE IP_DEFINITION_SOURCE OF design_main_uint16_seg_coder_0_0_arch: ARCHITECTURE IS "module_ref";
+  ATTRIBUTE IP_DEFINITION_SOURCE OF design_main_binary_bcd_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 12000000, PHASE 0.000, CLK_DOMAIN design_main_sysclk, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
-  U0 : uint16_seg_coder
+  U0 : binary_bcd
+    GENERIC MAP (
+      N => 16
+    )
     PORT MAP (
-      intIn => intIn,
-      muxOut => muxOut,
-      nibbleOut => nibbleOut,
-      clk => clk
+      clk => clk,
+      binary_in => binary_in,
+      bcd0 => bcd0,
+      bcd1 => bcd1,
+      bcd2 => bcd2,
+      bcd3 => bcd3
     );
-END design_main_uint16_seg_coder_0_0_arch;
+END design_main_binary_bcd_0_0_arch;
