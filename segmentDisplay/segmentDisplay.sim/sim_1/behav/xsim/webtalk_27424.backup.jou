@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1.2 (64-bit)
+# SW Build 2615518 on Fri Aug  9 15:53:29 MDT 2019
+# IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+# Start of session at: Tue Sep 10 16:03:21 2019
+# Process ID: 27424
+# Current directory: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/behav/xsim/xsim.dir/main_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/behav/xsim/xsim.dir/main_behav/webtalk/xsim_webtalk.tcl -notrace

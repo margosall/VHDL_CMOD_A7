@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 10 23:12:42 2019" VIVADOVERSION="2019.1.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.1" DEVICE="7a35t" NAME="design_main" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="3" NAME="digitSelect" RIGHT="0" SIGIS="undef" SIGNAME="mux_0_digitSelect">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mux_0" PORT="digitSelect"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="segmentPins" RIGHT="0" SIGIS="undef" SIGNAME="segmentDisplay_0_seg7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="segmentDisplay_0" PORT="seg7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="12000000" DIR="I" NAME="sysclk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="timer_0" PORT="clk"/>
+        <CONNECTION INSTANCE="uint16_seg_coder_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/mux_0" HWVERSION="1.0" INSTANCE="mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mux" VLNV="xilinx.com:module_ref:mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_main_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="mux2" RIGHT="0" SIGIS="undef" SIGNAME="uint16_seg_coder_0_muxOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uint16_seg_coder_0" PORT="muxOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="digitSelect" RIGHT="0" SIGIS="undef" SIGNAME="mux_0_digitSelect">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="digitSelect"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/segmentDisplay_0" HWVERSION="1.0" INSTANCE="segmentDisplay_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="segmentDisplay" VLNV="xilinx.com:module_ref:segmentDisplay:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_main_segmentDisplay_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="nrValue" RIGHT="0" SIGIS="undef" SIGNAME="uint16_seg_coder_0_nibbleOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uint16_seg_coder_0" PORT="nibbleOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="seg7" RIGHT="0" SIGIS="undef" SIGNAME="segmentDisplay_0_seg7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="segmentPins"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/timer_0" HWVERSION="1.0" INSTANCE="timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="timer" VLNV="xilinx.com:module_ref:timer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_main_timer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="12000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="intOut" RIGHT="0" SIGIS="undef" SIGNAME="timer_0_intOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uint16_seg_coder_0" PORT="intIn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/uint16_seg_coder_0" HWVERSION="1.0" INSTANCE="uint16_seg_coder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="uint16_seg_coder" VLNV="xilinx.com:module_ref:uint16_seg_coder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_main_uint16_seg_coder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="intIn" RIGHT="0" SIGIS="undef" SIGNAME="timer_0_intOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="timer_0" PORT="intOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="muxOut" RIGHT="0" SIGIS="undef" SIGNAME="uint16_seg_coder_0_muxOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mux_0" PORT="mux2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="nibbleOut" RIGHT="0" SIGIS="undef" SIGNAME="uint16_seg_coder_0_nibbleOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="segmentDisplay_0" PORT="nrValue"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="12000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_sysclk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sysclk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

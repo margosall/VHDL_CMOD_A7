@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.2 (64-bit)
+# SW Build 2615518 on Fri Aug  9 15:53:29 MDT 2019
+# IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+# Start of session at: Tue Sep 10 21:45:06 2019
+# Process ID: 21181
+# Current directory: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1
+# Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/main.vds
+# Journal file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace

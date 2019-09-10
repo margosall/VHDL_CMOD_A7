@@ -1,0 +1,94 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "name": "seg_main_design",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1.2"
+    },
+    "design_tree": {
+      "counter_0": "",
+      "segmentDisplay_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "12000000"
+          }
+        }
+      },
+      "seg7": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "xci_name": "seg_main_design_counter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "nibbleOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "segmentDisplay_0": {
+        "vlnv": "xilinx.com:module_ref:segmentDisplay:1.0",
+        "xci_name": "seg_main_design_segmentDisplay_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "segmentDisplay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "nrValue": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "seg7": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "counter_0_nibbleOut": {
+        "ports": [
+          "counter_0/nibbleOut",
+          "segmentDisplay_0/nrValue"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "counter_0/clk"
+        ]
+      },
+      "segmentDisplay_0_seg7": {
+        "ports": [
+          "segmentDisplay_0/seg7",
+          "seg7"
+        ]
+      }
+    }
+  }
+}

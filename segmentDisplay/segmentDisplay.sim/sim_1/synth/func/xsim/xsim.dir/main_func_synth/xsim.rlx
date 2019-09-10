@@ -1,0 +1,12 @@
+
+{ 
+    crc :  6257043848274182516  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 14ccaad188b44019bdbd8e0faafd6646 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot main_func_synth xil_defaultlib.main" , 
+    buildDate : "Aug  9 2019" , 
+    buildTime : "16:44:31" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/main_func_synth/xsimk\"   \"xsim.dir/main_func_synth/obj/xsim_0.lnx64.o\" \"xsim.dir/main_func_synth/obj/xsim_1.lnx64.o\" \"xsim.dir/main_func_synth/obj/xsim_2.lnx64.o\" \"xsim.dir/main_func_synth/obj/xsim_3.lnx64.o\" \"xsim.dir/main_func_synth/obj/xsim_4.lnx64.o\" -L\"/home/margo/Xilinx/Vivado/2019.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

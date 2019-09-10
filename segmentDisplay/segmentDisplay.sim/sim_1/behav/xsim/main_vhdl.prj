@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../segmentDisplay.srcs/sources_1/new/mux.vhd" \
+"../../../../segmentDisplay.srcs/sources_1/new/segmentDisplay.vhd" \
+"../../../../segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd" \
+"../../../../segmentDisplay.srcs/sources_1/new/main.vhd" \
+
+# Do not sort compile order
+nosort

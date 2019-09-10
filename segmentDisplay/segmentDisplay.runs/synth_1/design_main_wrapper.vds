@@ -1,0 +1,367 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.2 (64-bit)
+# SW Build 2615518 on Fri Aug  9 15:53:29 MDT 2019
+# IP Build 2614745 on Fri Aug  9 20:55:02 MDT 2019
+# Start of session at: Tue Sep 10 23:21:16 2019
+# Process ID: 17443
+# Current directory: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1
+# Command line: vivado -log design_main_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_main_wrapper.tcl
+# Log file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/design_main_wrapper.vds
+# Journal file: /home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_main_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/margo/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1484.984 ; gain = 38.754 ; free physical = 1798 ; free virtual = 7302
+Command: synth_design -top design_main_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17512 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1840.805 ; gain = 154.715 ; free physical = 1426 ; free virtual = 6930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_main_wrapper' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/hdl/design_main_wrapper.vhd:22]
+INFO: [Synth 8-3491] module 'design_main' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:14' bound to instance 'design_main_i' of component 'design_main' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/hdl/design_main_wrapper.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'design_main' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:26]
+INFO: [Synth 8-3491] module 'design_main_mux_0_0' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_mux_0_0/synth/design_main_mux_0_0.vhd:56' bound to instance 'mux_0' of component 'design_main_mux_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'design_main_mux_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_mux_0_0/synth/design_main_mux_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'mux' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/mux.vhd:34' bound to instance 'U0' of component 'mux' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_mux_0_0/synth/design_main_mux_0_0.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'mux' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/mux.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mux' (1#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/mux.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_main_mux_0_0' (2#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_mux_0_0/synth/design_main_mux_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'design_main_segmentDisplay_0_0' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_segmentDisplay_0_0/synth/design_main_segmentDisplay_0_0.vhd:56' bound to instance 'segmentDisplay_0' of component 'design_main_segmentDisplay_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'design_main_segmentDisplay_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_segmentDisplay_0_0/synth/design_main_segmentDisplay_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'segmentDisplay' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/segmentDisplay.vhd:34' bound to instance 'U0' of component 'segmentDisplay' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_segmentDisplay_0_0/synth/design_main_segmentDisplay_0_0.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'segmentDisplay' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/segmentDisplay.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'segmentDisplay' (3#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/segmentDisplay.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_main_segmentDisplay_0_0' (4#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_segmentDisplay_0_0/synth/design_main_segmentDisplay_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'design_main_timer_0_0' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_timer_0_0/synth/design_main_timer_0_0.vhd:56' bound to instance 'timer_0' of component 'design_main_timer_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'design_main_timer_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_timer_0_0/synth/design_main_timer_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'timer' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/timer.vhd:36' bound to instance 'U0' of component 'timer' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_timer_0_0/synth/design_main_timer_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'timer' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/timer.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element outi_reg was removed.  [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/timer.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'timer' (5#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/timer.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'design_main_timer_0_0' (6#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_timer_0_0/synth/design_main_timer_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'design_main_uint16_seg_coder_0_0' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_uint16_seg_coder_0_0/synth/design_main_uint16_seg_coder_0_0.vhd:56' bound to instance 'uint16_seg_coder_0' of component 'design_main_uint16_seg_coder_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'design_main_uint16_seg_coder_0_0' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_uint16_seg_coder_0_0/synth/design_main_uint16_seg_coder_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'uint16_seg_coder' declared at '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd:36' bound to instance 'U0' of component 'uint16_seg_coder' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_uint16_seg_coder_0_0/synth/design_main_uint16_seg_coder_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'uint16_seg_coder' [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'uint16_seg_coder' (7#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/new/uint16_seg_coder.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'design_main_uint16_seg_coder_0_0' (8#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/ip/design_main_uint16_seg_coder_0_0/synth/design_main_uint16_seg_coder_0_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'design_main' (9#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/synth/design_main.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'design_main_wrapper' (10#1) [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/sources_1/bd/design_main/hdl/design_main_wrapper.vhd:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1895.555 ; gain = 209.465 ; free physical = 1442 ; free virtual = 6947
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1901.492 ; gain = 215.402 ; free physical = 1438 ; free virtual = 6943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1901.492 ; gain = 215.402 ; free physical = 1438 ; free virtual = 6943
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_main_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_main_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2024.160 ; gain = 0.000 ; free physical = 1337 ; free virtual = 6845
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2024.160 ; gain = 0.000 ; free physical = 1337 ; free virtual = 6844
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1399 ; free virtual = 6912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1399 ; free virtual = 6912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_main_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_main_i/timer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_main_i/uint16_seg_coder_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_main_i/segmentDisplay_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_main_i/mux_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1398 ; free virtual = 6911
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1389 ; free virtual = 6902
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module timer 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module uint16_seg_coder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1363 ; free virtual = 6881
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2024.160 ; gain = 338.070 ; free physical = 1288 ; free virtual = 6809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 2063.176 ; gain = 377.086 ; free physical = 1245 ; free virtual = 6766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2063.176 ; gain = 377.086 ; free physical = 1241 ; free virtual = 6766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    43|
+|3     |LUT1   |     8|
+|4     |LUT2   |    77|
+|5     |LUT3   |    58|
+|6     |LUT4   |    48|
+|7     |LUT5   |    41|
+|8     |LUT6   |    96|
+|9     |FDRE   |    74|
+|10    |IBUF   |     1|
+|11    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------+---------------------------------+------+
+|      |Instance               |Module                           |Cells |
++------+-----------------------+---------------------------------+------+
+|1     |top                    |                                 |   458|
+|2     |  design_main_i        |design_main                      |   445|
+|3     |    mux_0              |design_main_mux_0_0              |     4|
+|4     |      U0               |mux                              |     2|
+|5     |    segmentDisplay_0   |design_main_segmentDisplay_0_0   |     7|
+|6     |      U0               |segmentDisplay                   |     7|
+|7     |    timer_0            |design_main_timer_0_0            |    68|
+|8     |      U0               |timer                            |    68|
+|9     |    uint16_seg_coder_0 |design_main_uint16_seg_coder_0_0 |   366|
+|10    |      U0               |uint16_seg_coder                 |   366|
++------+-----------------------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.113 ; gain = 383.023 ; free physical = 1238 ; free virtual = 6763
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 2069.113 ; gain = 260.355 ; free physical = 1292 ; free virtual = 6817
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2069.121 ; gain = 383.023 ; free physical = 1292 ; free virtual = 6817
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2072.082 ; gain = 0.000 ; free physical = 1241 ; free virtual = 6767
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 2072.082 ; gain = 587.098 ; free physical = 1355 ; free virtual = 6880
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2072.082 ; gain = 0.000 ; free physical = 1355 ; free virtual = 6880
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.runs/synth_1/design_main_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_main_wrapper_utilization_synth.rpt -pb design_main_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 10 23:22:33 2019...

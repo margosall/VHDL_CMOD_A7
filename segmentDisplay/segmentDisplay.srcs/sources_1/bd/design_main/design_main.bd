@@ -1,0 +1,204 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x96F09CF53FC5C424",
+      "device": "xc7a35tcpg236-1",
+      "name": "design_main",
+      "synth_flow_mode": "None",
+      "tool_version": "2019.1.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "timer_0": "",
+      "uint16_seg_coder_0": "",
+      "segmentDisplay_0": "",
+      "mux_0": ""
+    },
+    "ports": {
+      "digitSelect": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "segmentPins": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "sysclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_main_sysclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "12000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "timer_0": {
+        "vlnv": "xilinx.com:module_ref:timer:1.0",
+        "xci_name": "design_main_timer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "timer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_main_sysclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "12000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "intOut": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "uint16_seg_coder_0": {
+        "vlnv": "xilinx.com:module_ref:uint16_seg_coder:1.0",
+        "xci_name": "design_main_uint16_seg_coder_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uint16_seg_coder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_main_sysclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "12000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "intIn": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "muxOut": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "nibbleOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "segmentDisplay_0": {
+        "vlnv": "xilinx.com:module_ref:segmentDisplay:1.0",
+        "xci_name": "design_main_segmentDisplay_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "segmentDisplay",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "nrValue": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "seg7": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "mux_0": {
+        "vlnv": "xilinx.com:module_ref:mux:1.0",
+        "xci_name": "design_main_mux_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "mux2": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "digitSelect": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "timer_0_intOut": {
+        "ports": [
+          "timer_0/intOut",
+          "uint16_seg_coder_0/intIn"
+        ]
+      },
+      "uint16_seg_coder_0_nibbleOut": {
+        "ports": [
+          "uint16_seg_coder_0/nibbleOut",
+          "segmentDisplay_0/nrValue"
+        ]
+      },
+      "uint16_seg_coder_0_muxOut": {
+        "ports": [
+          "uint16_seg_coder_0/muxOut",
+          "mux_0/mux2"
+        ]
+      },
+      "sysclk_1": {
+        "ports": [
+          "sysclk",
+          "timer_0/clk",
+          "uint16_seg_coder_0/clk"
+        ]
+      },
+      "mux_0_digitSelect": {
+        "ports": [
+          "mux_0/digitSelect",
+          "digitSelect"
+        ]
+      },
+      "segmentDisplay_0_seg7": {
+        "ports": [
+          "segmentDisplay_0/seg7",
+          "segmentPins"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/margo/Documents/Programming/VHDL/segmentDisplay/segmentDisplay.sim/sim_1/synth/func/xsim/main_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux'
+INFO: [VRFC 10-3107] analyzing entity 'segmentDisplay'
+INFO: [VRFC 10-3107] analyzing entity 'uint16_seg_coder'
+INFO: [VRFC 10-3107] analyzing entity 'main'
